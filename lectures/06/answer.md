@@ -14,7 +14,10 @@
 
 <!-- 基礎・実装・発展のどれか1つに取り組めば完了です。 -->
 
-- 取り組んだレベル：基礎 / 実装 / 発展
-- やったこと：
+- 取り組んだレベル：基礎
+- やったこと： `app/mcp_server.py`に`server.tool()(tools.get_lecture_summary)を追加
 - 結果：
-- 気づき・疑問：
+    * [tool call]   glossary_get_lecture_summary({'lecture': 2})
+    * [tool return] glossary_get_lecture_summary -> # 第2回 ファインチューニングとLoRA
+    * 上記テーマの概要が説明された。
+- 気づき・疑問：モデルの応答が2回あり、一回目で "第2回では何を学びますか？" という入力文から "{'lecture': 2}のJSON入力が作成され、そのキーと値から"第2回 ファインチューニングとLoRA"が返ってきた。回答の文章の中身は、'data/lectures/06.md' であった。
